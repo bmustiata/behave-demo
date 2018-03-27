@@ -6,11 +6,19 @@ presentation.
 In it there are two scenarios in a feature file that attempt to check if the
 implementation of `ls` is correct.
 
+Slides available at https://www.slideshare.net/BogdanMustiata/behave-92100248
+
 == Running
 
 [source,sh]
 -----------------------------------------------------------------------------
 pip install behave
+-----------------------------------------------------------------------------
+
+Then in the folder where you checkout this project simply runs:
+
+[source,sh]
+-----------------------------------------------------------------------------
 behave
 -----------------------------------------------------------------------------
 
