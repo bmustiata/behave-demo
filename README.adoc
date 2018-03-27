@@ -1,0 +1,21 @@
+= `ls` behave testing
+
+This repository just holds the test sample that was presented for the `behave`
+presentation.
+
+In it there are two scenarios in a feature file that attempt to check if the
+implementation of `ls` is correct.
+
+== Running
+
+[source,sh]
+-----------------------------------------------------------------------------
+pip install behave
+behave
+-----------------------------------------------------------------------------
+
+== Things to look for:
+
+* `after_scenario` implemented in the `environment.py`
+* `use_step_matcher("re")` at the top of the `steps/tests.py`
+
