@@ -1,8 +1,10 @@
 stage('Run tests') {
-    deleteDir()
-    checkout scm
+    node {
+        deleteDir()
+        checkout scm
 
-    sh """
-        behave
-    """
+        sh """
+            behave
+        """
+    }
 }
