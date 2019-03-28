@@ -15,9 +15,13 @@ stage('Run tests') {
 
         docker.image('behave-test-build-env')
               .inside {
-            sh """
-                behave
-            """
+            try {
+                sh """
+                    behave --junit
+                """
+            } finally {
+                junit 'reports/*.xml'
+            }
         }
     }
 }
