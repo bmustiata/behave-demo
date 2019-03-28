@@ -41,5 +41,7 @@ def step_impl(context, expected_output: str):
 
 @step(u'I get the full listing of \'(.*?)\' including attributes')
 def step_impl(context, file_name: str):
-    TEST_RE = re.compile(r'^-rw-rw-r-- 1 \S+ \S+ 0 \S+ \d+ \d+:\d+ %s$' % file_name)
+    TEST_RE = re.compile(r'^-rw-r[w-]-r--.*%s$' % file_name)
+    print(context.command_output)
     assertTrue(TEST_RE.match(context.command_output))
+
