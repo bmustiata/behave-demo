@@ -8,7 +8,6 @@ stage('Build containers') {
     }
 }
 
-stage('Run tests') {
     node {
         deleteDir()
         checkout scm
