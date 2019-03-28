@@ -13,8 +13,11 @@ stage('Run tests') {
         deleteDir()
         checkout scm
 
-        sh """
-            behave
-        """
+        docker.image('behave-test-build-env')
+              .inside {
+            sh """
+                behave
+            """
+        }
     }
 }
