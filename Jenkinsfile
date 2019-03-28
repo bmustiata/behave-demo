@@ -1,6 +1,8 @@
 stage('Run tests') {
-    sh """
-        exit 1
+    deleteDir()
+    checkout scm
 
+    sh """
+        behave
     """
 }
